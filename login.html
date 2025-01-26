@@ -71,7 +71,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -99,7 +99,7 @@
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
-  <body class="admissions-page">
+  <body class="get-a-quote-page">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
@@ -117,12 +117,41 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
-              <a href="index.html">Home<br /></a>
+              <a href="index.html" class="active">Home<br /></a>
             </li>
-            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="about.html"
+                ><span>About</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="about.html#about">About VFPS</a></li>
+                <li><a href="about.html#team">Management</a></li>
+                <li><a href="about.html#environment">Our Environment</a></li>
+              </ul>
+            </li>
 
-            <li><a href="admissions.html" class="active">Admissions</a></li>
-            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li class="dropdown">
+              <a href="academics.html"
+                ><span>Academics</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li>
+                  <a href="academics.html#elementary-school"
+                    >Elementary School</a
+                  >
+                </li>
+                <li>
+                  <a href="academics.html#junior-school">Junior School</a>
+                </li>
+                <li>
+                  <a href="academics.html#senior-school">Senior School</a>
+                </li>
+                <li><a href="academics.html#policies">Policies</a></li>
+              </ul>
+            </li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -138,169 +167,90 @@
       <div
         class="page-title dark-background"
         data-aos="fade"
-        style="background-image: url(assets/img/hero-admission.webp)"
+        style="background-image: url(assets/img/hero-join.webp)"
       >
         <div class="container position-relative">
-          <h1>Admissions</h1>
+          <h1>Student & Staff Portal</h1>
           <p>
-            Join Vanguard Public School & College (VPSC) and embark on a journey
-            of academic excellence, holistic development, and lifelong learning.
+            Access your personalized dashboard by logging in below. If you face
+            any issues, please contact support at
+            <strong>info@vpsc.ac.pk</strong>.
           </p>
           <nav class="breadcrumbs">
             <ol>
               <li><a href="index.html">Home</a></li>
-              <li class="current">Admissions</li>
+              <li class="current">Login to Staff & Student Portal</li>
             </ol>
           </nav>
         </div>
       </div>
       <!-- End Page Title -->
 
-      <div class="container section-title" data-aos="fade-up">
-        <span>Admission Policy<br /></span>
-        <h2>Admission Policy</h2>
-        <p>
-          At VPSC, our admission policy is designed to ensure a fair and
-          transparent process for all applicants. We are committed to providing
-          equal opportunities for students from diverse backgrounds. Our policy
-          emphasizes academic merit, holistic development, and the potential for
-          future success. We believe in nurturing young minds and building
-          futures through a comprehensive and inclusive approach to education.
-          Our admissions process includes a thorough assessment of each
-          applicant's academic abilities, personal qualities, and
-          extracurricular achievements to ensure they align with our values and
-          standards.
-        </p>
-      </div>
+      <!-- Get A Quote Section -->
+      <section id="get-a-quote" class="get-a-quote section">
+        <div class="container">
+          <div class="row g-0" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="col-lg-5 quote-bg"
+              style="
+                background-image: url(assets/img/quote-bg.webp);
+                opacity: 0.6;
+                background-size: 50%;
+                background-size: contain; /* Ensures the image scales to fit */
+                background-repeat: no-repeat; /* Prevents the image from repeating */
+                background-position: center; /* Centers the image */
+              "
+            ></div>
 
-      <div class="container section-title" data-aos="fade-up">
-        <span>Registration<br /></span>
-        <h2>Registration</h2>
-        <p>
-          Parents seeking admission should first register their child and make
-          an appointment to appear in the test. Registration does not confirm or
-          guarantee admission. Admission is subject to passing the admission
-          test, the interview, and the availability of space in the class. The
-          class for which a child is tested is determined according to the
-          child’s age.
-        </p>
-      </div>
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+              <form
+                action="forms/login-handler.php"
+                method="post"
+                class="php-email-form"
+                onsubmit="return validateLoginForm(event)"
+              >
+                <h3>Login</h3>
 
-      <div class="container section-title" data-aos="fade-up">
-        <span>Admission Test<br /></span>
-        <h2>Admission Test</h2>
-        <p>
-          Applicants for Montessori and onwards are tested in three subjects:
-          English, Urdu, and Mathematics (Science is also included for class
-          VIII and IX). For the written test, the child should come properly
-          equipped with the required stationery. The tests are of a general
-          nature, designed to assess the knowledge.
-        </p>
-      </div>
+                <div class="row gy-4">
+                  <div class="col-12">
+                    <input
+                      type="text"
+                      name="user_id"
+                      class="form-control"
+                      placeholder="Staff/Student ID"
+                      required
+                    />
+                  </div>
 
-      <div class="container section-title" data-aos="fade-up">
-        <span>Admission Steps<br /></span>
-        <h2>Admission Steps</h2>
-        <p>
-          Admission is based on merit, availability of seats, and sibling
-          reference. Those found suitable will be issued admission forms. Once
-          the admission is approved by the principal, the necessary fee challan
-          will be issued. Admission will be confirmed upon the deposit of fees
-          and completion of steps 3 and 4.
-          <br /><br />
-          **Documents required for admission**: - Fresh admission: -
-          Parent’s/guardian’s CNIC copy - Birth certificate/B-form of the
-          applicant - Two 1x1 sized recent photographs of the student - For
-          admission through migration: - Parent’s/guardian’s CNIC copy - Two 1x1
-          sized recent photographs of the student - School leaving certificate -
-          Last progress report
-        </p>
-      </div>
+                  <div class="col-12">
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                    <style>
+                      .form-control::placeholder {
+                        color: darkgray; /* Change to any color you need */
+                      }
+                    </style>
+                  </div>
 
-      <div class="container section-title" data-aos="fade-up">
-        <span>Admissions: O Level<br /></span>
-        <h2>Admissions: O Level</h2>
-        <p>
-          Admission to O Level classes is test-based for all students. Students
-          with 90% or above marks are eligible for a full tuition fee
-          concession, whereas students with 80% or above are eligible for a 50%
-          tuition fee concession.
-        </p>
-      </div>
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Admissions: A Level<br /></span>
-        <h2>Admissions: A Level</h2>
-        <p>
-          Admission to A Level classes is test-based for all students. Students
-          with 90% or above marks are eligible for a full tuition fee
-          concession, whereas students with 80% or above are eligible for a 50%
-          tuition fee concession.
-        </p>
-      </div>
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Admissions: HSSC Part-I<br /></span>
-        <h2>Admissions: HSSC Part-I</h2>
-        <p>
-          Admission to HSSC Part-I classes is test-based for all students.
-          Students with 90% or above marks are eligible for a full tuition fee
-          concession, whereas students with 80% or above are eligible for a 50%
-          tuition fee concession.
-        </p>
-      </div>
-
-      <div class="container section-title" data-aos="fade-up">
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Compulsory Subjects</th>
-                <th>Pre-Med</th>
-                <th>Pre-Eng</th>
-                <th>Science General</th>
-                <th>Humanities</th>
-                <th>Commerce</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>English</td>
-                <td>Biology</td>
-                <td>Mathematics</td>
-                <td>Computer Science</td>
-                <td>Education (POA, POE)</td>
-                <td>POA, POE</td>
-              </tr>
-              <tr>
-                <td>Urdu</td>
-                <td>Chemistry</td>
-                <td>Physics</td>
-                <td>Mathematics</td>
-                <td>Economics (POC)</td>
-                <td>POC</td>
-              </tr>
-              <tr>
-                <td>Islamic Studies</td>
-                <td>Physics</td>
-                <td>Chemistry</td>
-                <td>Physics</td>
-                <td>Computer Studies</td>
-                <td>Business Math</td>
-              </tr>
-            </tbody>
-          </table>
+                  <div class="col-12 text-center">
+                    <div id="error-message" style="color: red; display: none">
+                      Please enter the correct ID and Password.
+                    </div>
+                    <button id="loginButton" type="submit">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Quote Form -->
+          </div>
         </div>
-      </div>
-
-      <div class="container section-title" data-aos="fade-up">
-        <span>Eligibility Criteria<br /></span>
-        <h2>Eligibility Criteria</h2>
-        <p>
-          Pre-Medical & Pre-Engineering: Minimum 70% marks Science General:
-          Minimum 60% marks Humanities & Commerce: Minimum 50% marks
-        </p>
-      </div>
+      </section>
+      <!-- /Get A Quote Section -->
     </main>
     <footer id="footer" class="footer dark-background">
       <div class="container footer-top">
@@ -366,7 +316,6 @@
         </div> -->
       </div>
     </footer>
-
     <!-- Scroll Top -->
     <a
       href="#"
@@ -394,5 +343,78 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form"); // Select the form element
+        const errorMessage = document.getElementById("error-message");
+        const apiUrl =
+          "https://script.google.com/macros/s/AKfycbytGizP33VC1Z27beZZC3YvpiCLlV_up5gA7aduOk7cVO6ruhxfhTMQlXolwh-7FY2nxA/exec"; // Replace with your Apps Script Web App URL
+
+        const userId = document.querySelector('input[name="user_id"]');
+        const password = document.querySelector('input[name="password"]');
+
+        // Clear fields immediately on focus
+        [userId, password].forEach((input) => {
+          input.addEventListener("focus", () => {
+            input.value = "";
+            errorMessage.style.display = "none";
+          });
+        });
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Check if either input is empty
+          if (!userId.value.trim() || !password.value.trim()) {
+            // Delay the error message display
+            setTimeout(function () {
+              errorMessage.textContent = "Both ID and Password are required.";
+              errorMessage.style.display = "block";
+            }, 1000); // Delay of 1 second (1000 milliseconds)
+
+            return;
+          }
+
+          // Show loader in the error message element
+          errorMessage.textContent = "Loading...";
+          errorMessage.style.color = "blue";
+          errorMessage.style.display = "block";
+
+          // Send login data to the server
+          fetch(apiUrl, {
+            method: "POST",
+            body: new URLSearchParams({
+              user_id: userId.value.trim(),
+              password: password.value.trim(),
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              setTimeout(function () {
+                if (data.success) {
+                  alert(data.message);
+                  errorMessage.style.display = "none";
+                } else {
+                  errorMessage.textContent = data.error || "An error occurred.";
+                  errorMessage.style.color = "red";
+                  errorMessage.style.display = "block";
+                }
+              }, 1000); // Delay of 1 second (1000 milliseconds)
+            })
+            .catch((error) => {
+              setTimeout(function () {
+                errorMessage.textContent =
+                  "An error occurred. Please try again.";
+                errorMessage.style.color = "red";
+                errorMessage.style.display = "block";
+              }, 1000); // Delay of 1 second (1000 milliseconds)
+            });
+
+          // Clear the input fields
+          userId.value = "";
+          password.value = "";
+        });
+      });
+    </script>
   </body>
 </html>
